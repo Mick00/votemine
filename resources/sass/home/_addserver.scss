@@ -1,0 +1,13 @@
+.ip-fields {
+    display: flex;
+    & > .form-group:first-child {
+        flex-shrink: 1;
+        flex-grow: 10;
+        flex-basis: auto;
+    }
+    & > .form-group:last-child {
+        flex-shrink: 1;
+        flex-grow: 1;
+        flex-basis: auto;
+    }
+}

@@ -1,0 +1,55 @@
+version: '2'
+services:
+  app:
+    build: .
+    volumes:
+    - ./:/var/www
+    ports:
+      - 8080:8000
+    depends_on:
+      - database
+  # The Web Server
+#  web:
+#    build:
+#      context: .
+#      dockerfile: ./dockers/nginx.dockerfile
+#    volumes:
+#      - ./uploads:/var/www/public/storage/uploads:ro
+#    ports:
+#      - 8080:443
+#    depends_on:
+#      - app
+  # The Database
+  database:
+    image: mysql:5.6
+    volumes:
+      - dbdata:/var/lib/mysql
+    environment:
+      - "MYSQL_DATABASE=${DB_DATABASE}"
+      - "MYSQL_USER=${DB_USERNAME}"
+      - "MYSQL_PASSWORD=${DB_PASSWORD}"
+      - "MYSQL_RANDOM_ROOT_PASSWORD=TRUE"
+  adminer:
+    image: adminer
+    ports:
+      - "8081:8080"
+  # redis
+  cache:
+    image: redis:3.0-alpine
+#  worker:
+#    build:
+#      context: .
+#      dockerfile: ./dockers/worker.dockerfile
+#      args:
+#        WORKER_UID: ${UID}
+#        WORKER_GID: ${GID}
+#    depends_on:
+#      - database
+    volumes:
+      - /var/www/storage
+      - ./uploads:/var/www/storage/uploads:rw
+      - ./logs:/var/www/storage/logs:rw
+    environment:
+      - "QUEUE_CONNECTION=${QUEUE_CONNECTION}"
+volumes:
+  dbdata:

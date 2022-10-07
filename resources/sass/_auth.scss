@@ -1,0 +1,19 @@
+.login-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.login-header-wrapper{
+    display: flex;
+    justify-content: center;
+    .login-header {
+        background: $primary-gradient;
+        color: $light;
+        display: inline-block;
+        padding: 20px 40px 20px 40px;
+        margin-top: -40px;
+        border-radius: 3em;
+    }
+}

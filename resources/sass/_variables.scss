@@ -1,0 +1,45 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Poppins', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #dcfca1;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+
+$primary: #f55536;
+$secondary:     #F59836;
+$success:       #28B357;
+$info:          #342ead;
+$warning:       #D57500;
+$danger:        #AA1D03;
+$light: #ffffff;
+$dark: #1b1b3a;
+
+$card-border-width: 0;
+
+$border-radius:               1.5rem;
+$border-radius-lg:            1.5rem;
+$border-radius-sm:            1.5rem;
+
+$alert-padding-y:                   .75rem;
+$alert-padding-x:                   1.5rem;
+$alert-margin-bottom:               0;
+$alert-border-width:                0;
+$alert-bg-level:                    0;
+$alert-border-level:                -9;
+$alert-color-level:                 -10;
+
+$primary-gradient: linear-gradient(45deg, $primary, $secondary);

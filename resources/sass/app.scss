@@ -1,0 +1,30 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import 'mixins/index';
+@import 'admin/main';
+@import "menu/index";
+@import 'components/index';
+@import 'auth';
+@import "alerts-section";
+@import "home/index";
+@import "footer";
+@import "server/index";
+
+html, body, #app {
+    height: 100%;
+}
+
+html, body, #app, main {
+    width: 100%;
+    position: relative;
+}
+
+.justify-self-end {
+    justify-self: end;
+}

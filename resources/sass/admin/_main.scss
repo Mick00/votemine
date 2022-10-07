@@ -1,0 +1,33 @@
+.admin-wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+$sidebar-padding: 10px;
+.sidebar {
+    flex: 0 1 auto;
+    padding: $sidebar-padding;
+    & > * {
+        height: calc(100% - 10px);
+    }
+    background-color: $primary;
+    color: white;
+    a.nav-link {
+        color: white;
+        font-size: 18px;
+        transition: color 0.2s;
+        &:hover{
+            color: $light;
+        }
+        &.active {
+            background-color: white;
+            color: $primary;
+        }
+    }
+}
+
+.view {
+    flex: 1 0 auto;
+}
+
+
